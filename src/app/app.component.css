@@ -1,0 +1,232 @@
+h1{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 35px;
+    font-weight: bold;
+    margin: 100px 0 0 30px;
+    color: #222;
+}
+.forBorder{
+    border: 4px solid #707070;
+    width: 236px;
+    border-radius: 5px;
+    margin-left: 30px;
+    margin-top: 5px;
+}
+.form{
+    width: 50%;
+    background: #ffffff;
+    min-height: 400px;
+    padding: 20px;
+    border-radius: 15px;
+    font-family: 'Montserrat';
+    float: right;
+}
+label{
+    font-size: 12px;
+}
+small{
+    font-size: 50%;
+    color: #999;
+    margin-top: 5px;
+}
+.form-control{
+    border: 0px;
+    border-bottom: 1px solid #ced4da;
+    border-radius: 0;
+}
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+}
+
+.switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.togg {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: -5px;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.togg:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 1px;
+    bottom: 1.5px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked + .togg {
+    background-color: #663399;
+}
+
+input:focus + .togg {
+    box-shadow: 0 0 1px #663399;
+}
+  
+input:checked + .togg:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+.togg.round {
+    border-radius: 34px;
+}
+  
+.togg.round:before {
+    border-radius: 50%;
+} 
+  
+input[type="range"] {
+    display: block;
+    -webkit-appearance: none;
+    background-color: #bdc3c7;
+    height: 5px;
+    border-radius: 5px;
+    margin: 0 auto;
+    outline: 0;
+}
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    background-color: #663399;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 4px solid #fff;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+}​
+input[type="range"]::-webkit-slider-thumb:hover {
+    background-color: white;
+    border: 2px solid #e74c3c;
+}
+input[type="range"]::-webkit-slider-thumb:active {
+    transform: scale(1.6);
+}
+/* input[type="range"]::-webkit-slider-runnable-track { 
+} */
+
+
+/* wave div */
+.calc{
+    background: #663399;
+    width: 200px;
+    height: 300px;
+    float: right;
+    margin-top: 80px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    margin-left: 8px;
+}
+.container_calc {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    height: 300px;
+    padding-bottom: 100%;
+    vertical-align: middle;
+    overflow: hidden;
+}
+svg {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.content{
+    position: absolute;
+    color: #fff;
+    width: 100%;
+    text-align: center;
+    height: 300px;
+    padding: 55px 42px;
+    font-family: 'Montserrat';
+}
+.content p {
+    margin-bottom: 0;
+    font-size: 12px;
+}
+.form-control:focus{
+    border-bottom: 1px solid #663399;
+    box-shadow: 0 0 0 0rem #ae8cc5;
+}
+/* panel */
+.panel{
+    padding: 20px;
+    width: 100%;
+    height: 200px;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 30px #2321321F;
+    border-radius: 20px;
+    margin: 30px 0;
+    font-family: 'Montserrat';
+}
+.panel:hover{
+    background-color: #663399;
+    color: #ffffff;
+}
+.panel:hover .text{
+    color: #ffffff;
+}
+.panel .heading{
+    margin-bottom: 0;
+    font-size: 12px;
+    font-weight: bold;
+    margin-top: 1rem;
+    color: 333333;
+}
+.panel .text{
+    font-size: 11px;
+    color: #999999;
+}
+.botRight{
+    padding-left: 60px;
+}
+.botRight h1{
+    margin: 215px 0 0 0px;
+}
+.botRight .forBorder{
+    margin-left: 0px;
+}
+.right-text{
+    margin: 25px 0 0 0px;
+    font-family: 'Montserrat';
+    width: 75%;
+    color: #777;
+}
+.accountButton{
+    text-align: center;
+    color: #663399;
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+    background: transparent;
+    box-shadow: 0px 0px 20px #00000033;
+    border: 2px solid #663399;
+    border-radius: 24px;
+    font-family: 'Montserrat';
+    font-size: 14px;
+    padding: 0px 20px;
+    height: 45px;
+    margin-top: 30px;
+}
+.accountButton:hover{
+    background: #663399;
+    color: #ffffff;
+}
+
+    

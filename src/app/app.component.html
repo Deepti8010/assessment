@@ -1,0 +1,141 @@
+<div class="container">
+  <div class="row">
+    <div class="col-5">
+      <h1>
+        {{title}}
+      </h1>
+      <div class="forBorder"></div>
+      <br>
+      <br>
+      <br>
+      <div>
+        <img src="assets/images/collect_img-video.png" alt="collect_img-video" class="img-fluid">
+      </div>
+    </div>
+    <div class="col-7" style="margin-top: 75px;">
+      <div class="calc">
+        <div class="container_calc">
+          <svg viewBox="0 0 500 500" preserveAspectRatio="xMinYMin meet" style="border-top-right-radius: 15px;">
+            <path d="M0,100 C150,200 350,0 500,100 L500,00 L0,0 Z" style="stroke: none; fill:#9f62c9;"></path>
+          </svg>
+          <svg viewBox="0 0 500 500" preserveAspectRatio="xMinYMin meet" style="transform: scaleY(-1);border-top-right-radius: 15px;top:100px">
+            <path d="M0,100 C150,200 350,0 500,100 L500,00 L0,0 Z" style="stroke: none; fill:#9f62c9;"></path>
+          </svg>
+          <div class="content">
+            <p>Loan Amount</p>
+            <h5><span class="WebRupee">&#x20B9;</span> 1,00,000</h5>
+            <br>
+            <p>Your EMI will be</p>
+            <h5><span class="WebRupee">&#x20B9;</span> 15,000</h5>
+            <br>
+            <button class="buttonLogin">Get Money</button>
+          </div>
+        </div>
+      </div>
+      <div class="form">
+        <h6 class="text-center" style="margin-bottom: 40px;">Eligibility Calculator</h6>
+        <form>
+          <div class="form-group">
+            <label for="formControlRange">Monthly Income</label><br>
+            <span class="WebRupee"><strong>&#x20B9;</strong></span> <span><strong>{{income}}</strong></span><br>
+            <input type="range" id="range" class="form-control-range" min="100000" max="300000" value="income" (input)="incomeChanged($event.target.value)">
+            <small class="WebRupee float-left">&#x20B9; 1,00,000</small>
+            <small class="WebRupee float-right">&#x20B9; 3,00,000</small>
+          </div><br>
+          <div class="form-group">
+            <label for="formControlRange">Monthly Expense</label><br>
+            <span class="WebRupee"><strong>&#x20B9;</strong></span> <span><strong>{{expense}}</strong></span><br>
+            <input type="range" class="form-control-range" min="10000" max="75000" value="expense" (input)="expenseChanged($event.target.value)">
+          </div><br>
+          <div class="form-group">
+            <label for="formControlRange">Repayment Tenure</label>
+            <select class="form-control">
+              <option>6 Months</option>
+              <option>12 Months</option>
+              <option>18 Months</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Do you have any existing loans? </label>
+            <label class="switch float-right">
+              <input type="checkbox" checked>
+              <span class="togg round"></span>
+            </label>
+          </div>
+          <div class="form-group">
+            <label for="inputAddress">EMI of existing loan (optional)</label>
+            <input type="text" class="form-control" id="inputAddress" placeholder="&#8377; 15000">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="row"  style="margin-top: 60px;">
+    <div class="col-7">
+      <div class="row">
+        <div class="col-6">
+          <div class="panel">
+            <img src="assets/images/Get Paid Instantly.png" class="img-fluid">
+            <p class="heading">Quick cash disbursement</p>
+            <p class="text">Get terms loans that your business needs within 72 hrs</p>
+          </div>
+          <div class="panel">
+            <img src="assets/images/Low interest rate.png" class="img-fluid">
+            <p class="heading">Low-interest rate</p>
+            <p class="text">Achieve your financial goals with an amazing interest rate starting at 13% per annum</p>
+          </div>
+          <div class="panel">
+            <img src="assets/images/Secure Payments.png" class="img-fluid">
+            <p class="heading">Zero Paperwork</p>
+            <p class="text">Get started instantly by submitting only your basic details and bank statements</p>
+          </div>
+        </div>
+        <div class="col-6" style="margin-top: 120px;">
+          <div class="panel">
+            <img src="assets/images/freelancer_feature_icon_6@1.5x.png" class="img-fluid">
+            <p class="heading">Ace your business finances</p>
+            <p class="text">Manage banking, accounting  & everything in between, on one platform</p>
+          </div>
+          <div class="panel">
+            <img src="assets/images/Covid.png" class="img-fluid">
+            <p class="heading">Loans to fight COVID-19</p>
+            <p class="text">Zero EMI for first 3 months on Back-to-Business loans of upto 1 lakh</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-5 botRight">
+      <h1>
+        {{title_two}}
+      </h1><br>
+      <div class="forBorder"></div>
+      <p class="right-text">Get your hands on a term loan that's crafted for your business</p>
+      <button class="accountButton">Get an Open Account</button>
+    </div>
+  </div>
+</div>
+<script>
+  window.onload = function() {
+  var input = document.querySelector('input[type=range]'),
+    style_el = document.createElement('style'),
+    styles = [],
+    track_sel = ['::-webkit-slider-runnable-track'];
+  document.body.appendChild(style_el);
+
+  styles.push('');
+
+  input.addEventListener('input', function() {
+    var min = this.min || 100000,
+      max = this.max || 300000,
+      c_style, u, edge_w, val, str = '';
+
+    this.setAttribute('value', this.value);
+
+    val = this.value + '% 100%';
+    str += 'input[type="range"]' + track_sel[0] + '{background-size:' + val + '}';
+
+    styles[0] = str;
+    style_el.textContent = styles.join('');
+  }, false);
+}
+</script>
